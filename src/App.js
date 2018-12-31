@@ -4,19 +4,42 @@ import './App.css';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStroopwafel } from '@fortawesome/free-solid-svg-icons'
-import Header from './components/Header.js'
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Splash from './components/Splash.js'
+import AuthorsPage from './AuthorsPage.js'
+import BooksPage from './BooksPage.js'
+import AddBook from './AddBook.js'
 
-library.add(faStroopwafel)
+
+
+
+
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Header />
-        <div className="profileContainer">
-        <i class="fas fa-book"></i>
-        <i class="fas fa-user"></i>
-        </div>
+<div className="App" >
+  <BrowserRouter>
+      <div>
+          <Switch>
+            <Route path='/' component={Splash} exact />
+            <Route path='/Home' component={Splash} exact />
+            <Route path='/AuthorsPage' component={AuthorsPage} exact />
+            <Route path='/BooksPage' component={BooksPage} exact />
+            <Route path='/AddBook' component={AddBook} exact />
+
+
+
+          </Switch>
+      </div>
+      </BrowserRouter>
+
+
+
+
+
+
+
       </div>
     );
   }
