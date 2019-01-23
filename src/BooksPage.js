@@ -4,14 +4,19 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStroopwafel } from '@fortawesome/free-solid-svg-icons'
 import Header from './components/Header.js'
-import Books from './components/Books.js'
 import Buttons from './components/Buttons.js'
+import Books from './components/Books.js'
+import Book from './components/Book.js'
+
+
 
 
 class BooksPage extends Component {
 
   state = {
     booksData:[],
+    showBook:false,
+
 
   }
 
@@ -20,7 +25,7 @@ class BooksPage extends Component {
     .then(res => res.json())
     .then(res=>{
       this.setState({ booksData:res.books})
-      console.log(this.state.booksData,"this is it ");
+
 
     })
 
@@ -35,6 +40,7 @@ class BooksPage extends Component {
         <Buttons />
         <div className="profileContainer">
         <Books booksData={this.state.booksData} />
+
         </div>
       </div>
     );

@@ -6,13 +6,7 @@ import Header from './components/Header.js'
 
 
 
-class AddBook extends Component {
-  state = {
-    booksData:[],
-
-
-
-  }
+class AddAuthor extends Component {
 
   handleTitle = (e) => {
       this.setState({
@@ -39,14 +33,12 @@ handleURL = (e) => {
     this.setState({
       URLValue: e.target.value
     })
-    console.log(e.target.value);
-
 }
 
 
   sendIt = async(e) => {
     e.preventDefault();
-    console.log(this.state.TitleValue)
+    console.log('hiiii')
       const url = 'http://localhost:3003/books'
       const payload = {
         Book_Title: this.state.TitleValue,
@@ -82,28 +74,28 @@ handleURL = (e) => {
         <Header />
         <div className="addBookContainer">
           <div className="addBook">
-            <h1>Add Book </h1>
+            <h1>Add an Author </h1>
           </div>
 
         <div>
   <form class="formContainer">
   <div class="form-row">
     <div class="col">
-      <input type="text" class="form-control" placeholder="Title" onChange={this.handleTitle}></input>
+      <input type="text" class="form-control" placeholder="First Name" onChange={this.handleTitle}></input>
     </div>
     <div class="col">
-      <input type="text" class="form-control" placeholder="Genre" onChange={this.handleGenre}></input>
+      <input type="text" class="form-control" placeholder="Last Name" onChange={this.handleGenre}></input>
     </div>
-    <input type="text" class="form-control" placeholder="Description"onChange={this.handleDescription}></input>
+    <input type="text" class="form-control" placeholder="Biography"onChange={this.handleDescription}></input>
     <div class="col">
-      <input type="text" class="form-control dotted" placeholder="Author" disabled></input>
+      <input type="text" class="form-control dotted" placeholder="Book" disabled></input>
     </div>
     <div class="col">
-      <input type="text" class="form-control" placeholder="cover URL"onChange={this.handleURL}></input>
+      <input type="text" class="form-control" placeholder="Portriat URL"onChange={this.handleURL}></input>
     </div>
   </div>
-  <button type="submit" class="btn submit btn-primary"onClick={this.sendIt}>Submit a Book</button>
-
+  <button type="submit" class="btn submit btn-primary"onClick={this.sendIt}>Submit New Author</button>
+  info :
 
 
 </form>
@@ -117,4 +109,4 @@ handleURL = (e) => {
 }
 }
 
-export default AddBook;
+export default AddAuthor;

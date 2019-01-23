@@ -14,7 +14,7 @@ const Buttons= () => {
 
       <button type="button" class="btn">Add Book</button>
       </Link>
-      <Link to="AddBook"class="btn">
+      <Link to="AddAuthor"class="btn">
       <button type="button" class="btn">Add Author</button>
       </Link >
 

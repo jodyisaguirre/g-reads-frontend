@@ -9,6 +9,12 @@ import Splash from './components/Splash.js'
 import AuthorsPage from './AuthorsPage.js'
 import BooksPage from './BooksPage.js'
 import AddBook from './AddBook.js'
+import AddAuthor from './AddAuthor.js'
+import Book from './components/Book.js'
+
+
+
+
 
 
 
@@ -27,6 +33,10 @@ class App extends Component {
             <Route path='/AuthorsPage' component={AuthorsPage} exact />
             <Route path='/BooksPage' component={BooksPage} exact />
             <Route path='/AddBook' component={AddBook} exact />
+            <Route path='/AddAuthor' component={AddAuthor} exact />
+
+
+
 
 
 

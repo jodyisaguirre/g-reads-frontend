@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 
 
-const Books = ({booksData}) => {
+const Book = ({booksData}) => {
 
 
 const booksComponents = booksData.map(book => {
@@ -17,9 +17,8 @@ const booksComponents = booksData.map(book => {
         <h5>Author(s):<a className="details"href="">Alex Martlei </a></h5>
         <h6>{book.Book_Description}</h6>
         <div className="link">
-        <Link to="Book">
+
           <a><h5>Details</h5></a>
-          </Link>
 
         </div>
       </div>
@@ -41,4 +40,4 @@ const booksComponents = booksData.map(book => {
 
 }
 
-export default Books
+export default Book
